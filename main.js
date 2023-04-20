@@ -26,6 +26,17 @@ function formToggle() {
   form.classList.toggle('form-toggle');
 }
 
+Book.prototype.changeStatus = function () {
+  if (this.status === 'read') {
+    console.log('hi')
+    this.status = 'not read';
+  } else {
+    this.status = 'read';
+  }
+    removeEveryCard();
+    addBooksToPage(myLibrary);
+};
+
 function addBooksToPage(list) {
   list.map((book, index) => {
     const card = document.createElement('div');
@@ -65,15 +76,7 @@ function addBooksToPage(list) {
 
     console.log(myLibrary);
 
-    changeStatusBtn.addEventListener('click', () => {
-      if (book.status === 'read') {
-        book.status = 'not read';
-      } else {
-        book.status = 'read';
-      }
-      removeEveryCard();
-      addBooksToPage(myLibrary);
-    });
+    changeStatusBtn.addEventListener('click', () => book.changeStatus())
 
     removeBookBtn.addEventListener('click', () => {
       myLibrary.splice(index, 1);
