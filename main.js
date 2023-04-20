@@ -28,7 +28,6 @@ function formToggle() {
 
 Book.prototype.changeStatus = function () {
   if (this.status === 'read') {
-    console.log('hi')
     this.status = 'not read';
   } else {
     this.status = 'read';
@@ -73,8 +72,6 @@ function addBooksToPage(list) {
 
     removeBookBtn.setAttribute('type', 'button');
     changeStatusBtn.setAttribute('type', 'button');
-
-    console.log(myLibrary);
 
     changeStatusBtn.addEventListener('click', () => book.changeStatus())
 
