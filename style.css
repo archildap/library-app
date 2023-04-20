@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(250, 240, 220);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 30%));
+    grid-auto-rows: 250px;
+    justify-content: center;
+    margin: 20px;
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+    padding: 10px 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-top: 10px solid rgb(167, 238, 243);
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 30px;
+    background: rgb(132, 214, 247);
+    border: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: rgb(158, 223, 248);
+}
+
+.btn:active {
+    border: 2px rgb(120, 144, 248) solid;
+}
+
+.change-button {
+    padding: 5px 15px;
+}
+
+form {
+    display: none;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 8px 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.radio {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
